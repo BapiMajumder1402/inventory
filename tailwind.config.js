@@ -12,6 +12,7 @@ export default {
         labelBg: '#5E6366',
         sectionTitle: '#8B8D97',
         lightBlueBg: '#EFF1F999',
+        lightYellow:"#FEF5EA"
       },
       borderRadius: {
         inputRadius: '8px',
