@@ -7,7 +7,7 @@ import BreadCrumbs from '../components/BreadCrumbs';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const AddProduct = lazy(() => import('../pages/AddProduct'));
-const ProductData = lazy(() => import('../pages/ProductData'));
+const ProductData = lazy(() => import('../pages/OrderData'));
 
 const Routes = () => {
   return (

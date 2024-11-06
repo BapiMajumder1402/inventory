@@ -3,5 +3,16 @@
 @tailwind utilities;
 
 button{border-radius: 12px; font-size: 16px;color: #fff; padding: .5rem 2rem;display: flex;gap: .5rem;align-items: center;}
-.page{background-color: #eff2fc99; padding: 2rem;min-height: 90vh;margin-left: 6rem;}
+.page{background-color: #eff2fc99; padding: 0 1.5rem 2rem 1.5rem;min-height: 90vh;margin-left: 6rem;}
 .heading{font-weight: 600;font-size: 1.2rem;color: #45464E;}
+th.css-1orzuox-MuiTableCell-root{color:#2C2D33;font-size: 15px;}
+td p.css-rizt0-MuiTypography-root{color: #6E7079;font-size: 14px;}
+.newProductPage  .flex-col>div>input, .newProductPage textarea,.inputButton{background: #EFF1F999;padding: .75rem 1.25rem;background: #EFF1F999;font-size: 1.1rem;color: #5E6366;border-radius: 8px;}
+.newProductPage input::placeholder,
+.newProductPage textarea::placeholder {color: #ABAFB1;}
+.img-Card{box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;border-radius: 12px;position: relative;}
+.img-Card .buttons{position: absolute; top: 4%; right: 4%;display: flex; gap: 1.2rem;}
+.active svg{color: #fff;}
+.active {color: #fff;background-color: rgb(85 112 241 / var(--tw-bg-opacity));}
+nav a svg{color: #45464E; font-size: 2rem;}
+nav a:hover svg {color: #fff;}

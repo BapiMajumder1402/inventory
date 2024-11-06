@@ -2,7 +2,7 @@ import React, { useState, MouseEvent } from 'react';
 import { Menu, MenuItem} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import logo from '/logo.jpg';
-
+import profile from '/profile.jpg'
 const TopNavBar: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -16,7 +16,7 @@ const TopNavBar: React.FC = () => {
   };
 
   return (
-    <div className="ml-24 flex justify-between items-center p-4 ">
+    <div className="ml-24 flex justify-between items-center px-6 py-4 ">
       <div>
         <h3 className="text-left text-2xl">Inventory</h3>
       </div>
@@ -35,7 +35,7 @@ const TopNavBar: React.FC = () => {
           <MenuItem onClick={handleClose}>Settings</MenuItem>
           <MenuItem onClick={handleClose}>Logout</MenuItem>
         </Menu>
-        <img src={logo} alt="Logo" className="w-10 h-10 rounded-full" />
+        <img src={profile} alt="Logo" className="w-10 h-10 rounded-lg" />
       </div>
     </div>
   );
