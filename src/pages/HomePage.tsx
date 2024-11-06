@@ -6,12 +6,13 @@ import TableComponent from "../components/TableComponent";
 const HeadingSection = () => {
   return (
     <div className="page">
-      <div className="flex justify-between items-center mx-0 py-6">
-        <h4 className="text-left heading">Inventory Summery</h4>
-        <button className="bg-blueBg hover:bg-blue-600">
-          <AddIcon /> Add New Product
+      <div className="flex flex-col md:flex-row justify-between items-center mx-0 py-6">
+        <h4 className="text-left heading mb-4 md:mb-0">Inventory Summary</h4>
+        <button className="w-full md:w-auto  bg-blueBg text-white hover:bg-blue-600 ">
+          <AddIcon className="mr-2" /> Add New Product
         </button>
       </div>
+
       <div className="flex flex-col md:flex-row gap-8">
         <div className="flex-1 h-40 bg-blueBg p-4 rounded-xl flex flex-col justify-between">
           <div>

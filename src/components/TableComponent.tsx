@@ -50,9 +50,7 @@ const TableComponent: React.FC = () => {
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const [selectedProduct, setSelectedProduct] = React.useState<number | null>(
-    null
-  );
+  const [selectedProduct, setSelectedProduct] = React.useState<number | null>(null);
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
@@ -79,10 +77,10 @@ const TableComponent: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl p-4 mt-6">
-      <div className="flex justify-between items-center p-4">
-        <h3 className="text-lg ">Inventory Items</h3>
-        <div className="flex items-center space-x-4">
+    <div className="bg-white rounded-xl p-4 mt-6 overflow-scroll max-w-[72vw] md:max-w-[82vw] lg:max-w-[100vw]">
+      <div className="flex flex-wrap justify-between items-center p-4">
+        <h3 className="text-lg w-full sm:w-auto">Inventory Items</h3>
+        <div className="flex items-center space-x-4 mt-4 sm:mt-0">
           <div className="flex items-center border rounded-md px-2 py-1">
             <img src={search} alt="Search icon" className="mr-2" />
             <input
@@ -96,102 +94,105 @@ const TableComponent: React.FC = () => {
             <span className="text-[#53545C]">Send</span>
           </button>
           <button className="flex items-center px-3 py-1 rounded-md border border-black">
-            <img src={Calender} alt="Send icon" className="mr-2" />
+            <img src={Calender} alt="Calendar icon" className="mr-2" />
             <span className="text-[#53545C]">Filter</span>
           </button>
           <button className="flex items-center px-3 py-1 rounded-md border border-black">
-            <img src={filter} alt="Send icon" className="mr-2" />
+            <img src={filter} alt="Filter icon" className="mr-2" />
             <span className="text-[#53545C]">Filter</span>
           </button>
           <button className="flex items-center px-3 py-1 rounded-md border border-black">
             <span className="text-[#53545C]">Bulk Action</span>
-<ExpandMoreIcon className="text-black"/>
+            <ExpandMoreIcon className="text-black"/>
           </button>
         </div>
       </div>
 
-      <TableContainer>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell padding="checkbox">
-                <Checkbox />
-              </TableCell>
-              <TableCell>Product Image</TableCell>
-              <TableCell>
-                Product Name <FilterListIcon />
-              </TableCell>
-              <TableCell>
-                Category <FilterListIcon />
-              </TableCell>
-              <TableCell>
-                Unit Price <FilterListIcon />
-              </TableCell>
-              <TableCell>
-                Stock <FilterListIcon />
-              </TableCell>
-              <TableCell>
-                Discount <FilterListIcon />
-              </TableCell>
-              <TableCell>
-                Total Value <FilterListIcon />
-              </TableCell>
-              <TableCell>
-                Action <FilterListIcon />
-              </TableCell>
-              <TableCell>
-                Status <FilterListIcon />
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {dummyData
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((product) => (
-                <TableRow key={product.id}>
-                  <TableCell padding="checkbox">
-                    <Checkbox />
-                  </TableCell>
-                  <TableCell>
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      style={{ width: "40px", height: "40px" }}
-                    />
-                  </TableCell>
-                  <TableCell>
-                    <Typography>{product.name}</Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Typography>{product.category}</Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Typography>${product.unitPrice}</Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Typography>{product.stock}</Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Typography>{product.discount}%</Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Typography>${product.totalValue}</Typography>
-                  </TableCell>
-                  <TableCell>
-                    <IconButton
-                      onClick={(event) => handleClick(event, product.id)}
-                    >
-                      <FilterListIcon />
-                    </IconButton>
-                  </TableCell>
-                  <TableCell>
-                    <Typography>{product.status}</Typography>
-                  </TableCell>
-                </TableRow>
-              ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <div className="overflow-x-auto">
+        <TableContainer>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell padding="checkbox">
+                  <Checkbox />
+                </TableCell>
+                <TableCell>Product Image</TableCell>
+                <TableCell>
+                  Product Name <FilterListIcon />
+                </TableCell>
+                <TableCell>
+                  Category <FilterListIcon />
+                </TableCell>
+                <TableCell>
+                  Unit Price <FilterListIcon />
+                </TableCell>
+                <TableCell>
+                  Stock <FilterListIcon />
+                </TableCell>
+                <TableCell>
+                  Discount <FilterListIcon />
+                </TableCell>
+                <TableCell>
+                  Total Value <FilterListIcon />
+                </TableCell>
+                <TableCell>
+                  Action <FilterListIcon />
+                </TableCell>
+                <TableCell>
+                  Status <FilterListIcon />
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {dummyData
+                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                .map((product) => (
+                  <TableRow key={product.id}>
+                    <TableCell padding="checkbox">
+                      <Checkbox />
+                    </TableCell>
+                    <TableCell>
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        style={{ width: "40px", height: "40px" }}
+                      />
+                    </TableCell>
+                    <TableCell>
+                      <Typography>{product.name}</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography>{product.category}</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography>${product.unitPrice}</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography>{product.stock}</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography>{product.discount}%</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography>${product.totalValue}</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <IconButton
+                        onClick={(event) => handleClick(event, product.id)}
+                      >
+                        <FilterListIcon />
+                      </IconButton>
+                    </TableCell>
+                    <TableCell>
+                      <Typography>{product.status}</Typography>
+                    </TableCell>
+                  </TableRow>
+                ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
+
       <TablePagination
         rowsPerPageOptions={[5, 10, 25]}
         component="div"

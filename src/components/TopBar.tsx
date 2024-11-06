@@ -1,7 +1,6 @@
 import React, { useState, MouseEvent } from 'react';
 import { Menu, MenuItem} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import logo from '/logo.jpg';
 import profile from '/profile.jpg'
 const TopNavBar: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -16,7 +15,7 @@ const TopNavBar: React.FC = () => {
   };
 
   return (
-    <div className="ml-24 flex justify-between items-center px-6 py-4 ">
+    <div className="ml-[4.5rem] md:ml-24 flex justify-between items-center px-4 py-4 md:px-6 ">
       <div>
         <h3 className="text-left text-2xl">Inventory</h3>
       </div>

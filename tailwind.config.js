@@ -18,11 +18,11 @@ export default {
         inputRadius: '8px',
         boxRadius: '16px',
       },
-      screens: {
-        smMobile: '320px',
-        mobile: '480px',
-        tablet: '768px',
-      },
+      // screens: {
+      //   smMobile: '320px',
+      //   mobile: '480px',
+      //   tablet: '768px',
+      // },
     },
   },
   plugins: [],

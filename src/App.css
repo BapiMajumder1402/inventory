@@ -16,3 +16,7 @@ td p.css-rizt0-MuiTypography-root{color: #6E7079;font-size: 14px;}
 .active {color: #fff;background-color: rgb(85 112 241 / var(--tw-bg-opacity));}
 nav a svg{color: #45464E; font-size: 2rem;}
 nav a:hover svg {color: #fff;}
+
+@media(max-width:760px){
+    .page{margin-left: 4.5rem;padding: 1rem;}
+}
