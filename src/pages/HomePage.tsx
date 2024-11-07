@@ -18,14 +18,14 @@ const HeadingSection = () => {
           <div>
             <img src={folderIcon} alt="" />
           </div>
-          <div className="flex">
+          <div className="flex mt-3 lg:mt-0">
             <div className="flex-1 flex flex-col">
-              <h6 className="text-base text-white">All Products</h6>
-              <p className="font-semibold text-2xl text-white">350</p>
+              <h6 className=" text-sm sm:text-base text-white">All Products</h6>
+              <p className="font-semibold text-base sm:text-lg lg:text-2xl text-white">350</p>
             </div>
             <div className="flex-1 flex flex-col">
-              <h6 className="text-base text-white">Active</h6>
-              <p className="text-2xl font-semibold text-white">350</p>
+            <h6 className="text-sm sm:text-base text-white">Active</h6>
+              <p className="text-base sm:text-lg lg:text-2xl font-semibold text-white">350</p>
             </div>
           </div>
         </div>
@@ -40,18 +40,18 @@ const HeadingSection = () => {
               <ExpandMoreIcon />
             </div>
           </div>
-          <div className="flex">
+          <div className="flex mt-3 lg:mt-0">
             <div className="flex-1 flex flex-col">
-              <h6 className="text-base text-[#CC5F5F]">Low Stock Alert</h6>
-              <p className="text-2xl font-semibold text-black">350</p>
+              <h6 className="text-sm sm:text-base text-[#CC5F5F]">Low Stock Alert</h6>
+              <p className="text-base sm:text-lg lg:text-2xl font-semibold text-black">350</p>
             </div>
             <div className="flex-1 flex flex-col">
-              <h6 className="text-base text-slate-500">All Products</h6>
-              <p className="font-semibold text-2xl text-black">350</p>
+              <h6 className="text-sm sm:text-base text-slate-500">All Products</h6>
+              <p className="font-semibold text-base sm:text-lg lg:text-2xl text-black">350</p>
             </div>
             <div className="flex-1 flex flex-col">
-              <h6 className="text-base text-slate-500">All Products</h6>
-              <p className="font-semibold text-2xl text-black">350</p>
+              <h6 className="text-sm sm:text-base text-slate-500">All Products</h6>
+              <p className="font-semibold text-base sm:text-lg lg:text-2xl text-black">350</p>
             </div>
           </div>
         </div>

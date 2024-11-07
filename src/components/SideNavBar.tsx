@@ -53,21 +53,21 @@ const SideNavBar = () => {
             <NavLink
               to="/earphone"
               className="flex items-center p-3 bg-[#5E63661A] rounded-xl transition duration-200 hover:bg-blueBg">
-              <img src={earphone} alt="Earphone" className="w-7 h-7 md:w-6 md:h-6" />
+              <img src={earphone} alt="Earphone" className="w-5 h-5 md:w-6 md:h-6" />
             </NavLink>
           </li>
           <li className="list-none">
             <NavLink
               to="/gift"
               className="flex items-center p-3 rounded-xl bg-[#FFCC9133] transition duration-200 hover:bg-blueBg mt-3">
-              <img src={gift} alt="Gift" className="w-7 h-7 md:w-6 md:h-6" />
+              <img src={gift} alt="Gift" className="w-5 h-5 md:w-6 md:h-6" />
             </NavLink>
           </li>
           <li className="list-none">
             <NavLink
               to="/logout"
               className="flex items-center mt-16 p-3 rounded-xl transition duration-200 hover:bg-blueBg">
-              <img src={logout} alt="Logout" className="w-7 h-7 md:w-6 md:h-6" />
+              <img src={logout} alt="Logout" className="w-5 h-5 md:w-6 md:h-6" />
             </NavLink>
           </li>
         </ul>

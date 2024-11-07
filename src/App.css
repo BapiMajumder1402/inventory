@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+body{overflow-x: hidden;}
 button{border-radius: 12px; font-size: 16px;color: #fff; padding: .5rem 2rem;display: flex;gap: .5rem;align-items: center;}
 .page{background-color: #eff2fc99; padding: 0 1.5rem 2rem 1.5rem;min-height: 90vh;margin-left: 6rem;}
 .heading{font-weight: 600;font-size: 1.2rem;color: #45464E;}
@@ -17,6 +18,22 @@ td p.css-rizt0-MuiTypography-root{color: #6E7079;font-size: 14px;}
 nav a svg{color: #45464E; font-size: 2rem;}
 nav a:hover svg {color: #fff;}
 
+.loader {
+    border: 4px solid #f3f3f3; 
+    border-top: 4px solid #3498db; 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
 @media(max-width:760px){
     .page{margin-left: 4.5rem;padding: 1rem;}
+    th.css-1orzuox-MuiTableCell-root{color:#2C2D33;font-size: 12px;padding: .5rem;text-align: center;}
+td p.css-rizt0-MuiTypography-root{color: #6E7079;font-size: 10px;padding: .5rem; text-align: center;}
 }

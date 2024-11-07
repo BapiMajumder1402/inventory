@@ -4,6 +4,7 @@ import { Routes as Switch, Route } from 'react-router-dom';
 import SideNavBar from '../components/SideNavBar';
 import TopNavBar from '../components/TopBar';
 import BreadCrumbs from '../components/BreadCrumbs';
+import Loader from '../pages/Loader';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const AddProduct = lazy(() => import('../pages/AddProduct'));
@@ -18,7 +19,7 @@ const Routes = () => {
           <TopNavBar />
           <BreadCrumbs/>
           <main className="flex-grow">
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loader/>}>
               <Switch>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/add-product" element={<AddProduct />} />

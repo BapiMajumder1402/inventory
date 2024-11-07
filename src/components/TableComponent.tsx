@@ -18,7 +18,7 @@ import filter from "/fi_filter.svg";
 import search from "/Search.svg";
 import Send from "/Send.svg";
 import Calender from "/Calendar.svg";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const dummyData = [
   {
@@ -50,7 +50,9 @@ const TableComponent: React.FC = () => {
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const [selectedProduct, setSelectedProduct] = React.useState<number | null>(null);
+  const [selectedProduct, setSelectedProduct] = React.useState<number | null>(
+    null
+  );
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
@@ -77,34 +79,37 @@ const TableComponent: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl p-4 mt-6 overflow-scroll max-w-[72vw] md:max-w-[82vw] lg:max-w-[100vw]">
+    <div className="bg-white rounded-xl p-4 mt-6 overflow-scroll max-w-[74vw] md:max-w-[82vw] lg:max-w-[100vw]">
       <div className="flex flex-wrap justify-between items-center p-4">
         <h3 className="text-lg w-full sm:w-auto">Inventory Items</h3>
-        <div className="flex items-center space-x-4 mt-4 sm:mt-0">
-          <div className="flex items-center border rounded-md px-2 py-1">
+        <div className="flex flex-col lg:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-4 sm:mt-0 gap-2">
+          <div className="flex items-center border rounded-md px-2 py-1 w-full lg:w-auto">
             <img src={search} alt="Search icon" className="mr-2" />
             <input
               type="text"
               placeholder="Search"
-              className="outline-none bg-transparent border-none placeholder-gray-500"
+              className="outline-none bg-transparent border-none placeholder-gray-500 w-full"
             />
           </div>
-          <button className="flex items-center px-3 py-1 rounded-md border border-black">
-            <img src={Send} alt="Send icon" className="mr-2" />
-            <span className="text-[#53545C]">Send</span>
-          </button>
-          <button className="flex items-center px-3 py-1 rounded-md border border-black">
-            <img src={Calender} alt="Calendar icon" className="mr-2" />
-            <span className="text-[#53545C]">Filter</span>
-          </button>
-          <button className="flex items-center px-3 py-1 rounded-md border border-black">
-            <img src={filter} alt="Filter icon" className="mr-2" />
-            <span className="text-[#53545C]">Filter</span>
-          </button>
-          <button className="flex items-center px-3 py-1 rounded-md border border-black">
-            <span className="text-[#53545C]">Bulk Action</span>
-            <ExpandMoreIcon className="text-black"/>
-          </button>
+
+          <div className="flex flex-wrap lg:flex-nowrap items-center gap-2 md:gap-4">
+            <button className="flex items-center px-3 py-1 rounded-md border border-black">
+              <img src={Send} alt="Send icon" className="mr-2" />
+              <span className="text-[#53545C]">Send</span>
+            </button>
+            <button className="flex items-center px-3 py-1 rounded-md border border-black">
+              <img src={Calender} alt="Calendar icon" className="mr-2" />
+              <span className="text-[#53545C]">Filter</span>
+            </button>
+            <button className="flex items-center px-3 py-1 rounded-md border border-black">
+              <img src={filter} alt="Filter icon" className="mr-2" />
+              <span className="text-[#53545C]">Filter</span>
+            </button>
+            <button className="flex items-center px-3 py-1 rounded-md border border-black">
+              <span className="text-[#53545C]">Action</span>
+              <ExpandMoreIcon className="text-black" />
+            </button>
+          </div>
         </div>
       </div>
 

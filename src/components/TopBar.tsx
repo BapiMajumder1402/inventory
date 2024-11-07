@@ -17,10 +17,10 @@ const TopNavBar: React.FC = () => {
   return (
     <div className="ml-[4.5rem] md:ml-24 flex justify-between items-center px-4 py-4 md:px-6 ">
       <div>
-        <h3 className="text-left text-2xl">Inventory</h3>
+        <h3 className="text-left text-lg sm:text-2xl ">Inventory</h3>
       </div>
       <div className="flex items-center space-x-4">
-        <div onClick={handleClick} className="bg-lightYellow py-2 px-4 rounded-lg text-base">
+        <div onClick={handleClick} className="bg-lightYellow py-2 px-2 sm:px-4 rounded-lg text-sm sm:text-base">
         Nanny’s Shop <ExpandMoreIcon className='ml-3'/>
         </div>
         <Menu
